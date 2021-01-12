@@ -73,10 +73,14 @@
 					})
 					.each(function() {
 
-						var	$this = $(this),
-							id = $this.attr('href'),
-							$section = $(id);
+						var	$this = $(this);
+						var id = $this.attr('href');
+						if(id === '' || id.substr(1) !== '#')
+							return;
 
+						var $section = $(id);
+
+						//------
 						// No section for this link? Bail.
 							if ($section.length < 1)
 								return;
