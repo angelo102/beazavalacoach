@@ -23,6 +23,7 @@
 		border-top-right-radius: _size(border-radius-main);
 		cursor: default;
 		text-align: center;
+		z-index: 1;
 
 		& + #main {
 			padding-top: 4.25em;
@@ -86,11 +87,88 @@
 			}
 		}
 
-		@include breakpoint('<=small') {
+		#checkbox1, .toggle {
 			display: none;
+		}
 
-			& + #main {
-				padding-top: 0;
+		#checkbox1 + label {
+			margin-bottom: initial;
+			padding: 0;
+			content: initial;
+			a{
+				color: #636363;
 			}
+			&:before{
+				height: 0;
+				width: 0;
+				padding: 0;
+				content: unset;
+			}
+		}
+
+		@include breakpoint('<=small') {
+			.toggle {
+				clear: both;
+				display: block;
+				text-align: center;
+				font-size: 14px;
+				line-height: 40px;
+				cursor: pointer;
+				width: 100%;
+				height: 40px;
+				font-size: 18px;
+				color: #595959;
+				background: #dbdbdb;
+				border-bottom-left-radius: 5px;
+				border-bottom-right-radius: 5px;
+				transition: all .1s linear;
+			  }
+			  .toggle:hover {
+				background: #cecece;
+			  }
+
+			  #checkbox1 + label {
+				width: 100%;
+				margin-bottom: 0px;
+			  }
+
+			  #checkbox1:checked + label .demo li {
+				opacity: 1;
+				visibility: visible;
+				transition: all .7s linear;
+			  }
+
+			  #checkbox1:checked + label .demo {
+				height: 200px;
+				
+			  }
+
+			  .menu {
+				border-radius: 0px;
+				border-top-left-radius: 5px;
+				border-top-right-radius: 5px;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-around;
+				align-items: center;
+				height: 0px;
+				transition: height .3s linear;
+			  }
+
+			  .menu li {
+				display: flex;
+				/* magic */
+				align-self: center;
+				width: 100%;
+				opacity: 0;
+				visibility: hidden;
+			  }
+
+			  .menu li a {
+				width: 100%;
+				text-align: center;
+				align-self: center;
+				align-content: center;
+			  }
 		}
 	}
