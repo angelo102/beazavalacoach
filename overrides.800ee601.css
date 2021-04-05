@@ -1,0 +1,70 @@
+body {
+  background-image: initial;
+  background-color: white;
+}
+body p {
+  margin-bottom: 1rem;
+  text-align: initial;
+}
+@media (max-width: 480px) {
+  body #wrapper {
+    max-width: calc(100% - 4em);
+  }
+}
+body header h1 {
+  color: #636363;
+}
+body nav {
+  background-color: lightgray !important;
+}
+body .main {
+  background-color: #f7f8f9;
+}
+body .main ul.actions {
+  justify-content: center;
+}
+body .main.about ul li {
+  text-align: initial;
+}
+body .main.take-action ul li {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+body footer {
+  color: #636363;
+}
+body footer img {
+  margin-bottom: initial !important;
+}
+body footer .links-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body footer .links-wrapper a:hover {
+  color: black;
+}
+body footer .links-wrapper .links {
+  margin-bottom: 1rem;
+}
+body footer .links-wrapper .details dl dt {
+  color: #636363;
+}
+body footer .links-wrapper .icons {
+  margin: initial;
+}
+body footer .links-wrapper .icons .icon {
+  color: #9b9b9b;
+  border-color: #9b9b9b;
+}
+body footer .links-wrapper .icons .icon:hover {
+  color: black;
+}
+body footer .copyright {
+  text-align: center !important;
+}
+
+/*# sourceMappingURL=/overrides.800ee601.css.map */

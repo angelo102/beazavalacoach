@@ -172,9 +172,11 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
       $this.addClass('active').addClass('active-locked');
     }).each(function () {
-      var $this = $(this),
-          id = $this.attr('href'),
-          $section = $(id); // No section for this link? Bail.
+      var $this = $(this);
+      var id = $this.attr('href');
+      if (id === '' || id.substr(1) !== '#') return;
+      var $section = $(id); //------
+      // No section for this link? Bail.
 
       if ($section.length < 1) return; // Scrollex.
 
@@ -231,7 +233,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59394" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58044" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
