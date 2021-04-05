@@ -9,12 +9,20 @@
 <head>
 	<title>1:1 - BeaZavalaCoach</title>
 	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="templates/stellar/assets/css/main.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/main.css">
+  
+	<meta name="theme-color" content="#fafafa">
+  
+	<!-- stellar -->
+	<link rel="stylesheet" href="templates/stellar/assets/sass/main.scss" />
 	<noscript>
-		<link rel="stylesheet" href="templates/stellar/assets/css/noscript.css" />
+	  <link rel="stylesheet" href="templates/stellar/assets/css/noscript.css" />
 	</noscript>
 	<link rel="stylesheet" href="templates/stellar/assets/sass/overrides.scss">
+	<!-- end stellar -->
 </head>
 
 <body class="is-preload">
@@ -28,10 +36,15 @@
 
 		<!-- Nav -->
 		<nav id="nav">
-			<ul>
-				<li><a href="/" class="">HOME</a></li>
-			</ul>
+			<input type="checkbox" id="checkbox1" />
+			<label for="checkbox1">
+				<ul class="menu demo">
+					<li><a href="/" class="">HOME</a></li>
+				</ul>
+				<span class="toggle">☰</span>
+			</label>
 		</nav>
+		
 		<!-- Main -->
 		<div id="main">
 
@@ -144,7 +157,7 @@
 					see if we’re a good match! Please use the calendar below to schedule in your best time, and I will
 					send the details for our call afterwards.</p>
 				<p>If you prefer skipping the call, and would like more details about the program, please send me “I’d
-					like more information about the program!” at beazavala.coach@gmail.com. I’ll be happy to send you a
+					like more information about the program!” at <a href="mailto:beazavala.coach@gmail.com">beazavala.coach@gmail.com</a>. I’ll be happy to send you a
 					form for you to fill out, and we can both see if we’re a good match!</p>
 				<p><b>Or</b></p>
 				<p>Do you already know you’re ready to join the 1:1 coaching program without the exploratory call?
